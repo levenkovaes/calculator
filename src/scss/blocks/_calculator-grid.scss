@@ -4,13 +4,13 @@
   display: grid;
   grid-template-columns: repeat(4, 50px);
   grid-template-rows: repeat(6, 50px);
-  margin: 60px auto;
+  margin: 40px auto;
   border-radius: 5px;
   box-shadow: inset 0 0 6px 2px $main-color-light;
-  padding: 40px;
+  padding: 60px 40px 40px;
   gap: 10px;
 
-  @include sm {
+  @include xl {
     grid-template-columns: repeat(4, 80px);
     grid-template-rows: repeat(6, 80px);
   }

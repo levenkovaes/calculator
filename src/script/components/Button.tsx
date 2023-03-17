@@ -1,10 +1,20 @@
 import React from "react";
 
 interface IButtonProps {
-  content: number | string;
+  content: string;
   className: string;
+  // handleClick: (content: string) => void;
 }
 
 export const Button = ({ content, className }: IButtonProps) => {
-  return <button className={className}>{content}</button>;
+  return (
+    <button
+      className={className}
+      // onClick={() => {
+      //   handleClick(content);
+      // }}
+    >
+      {content}
+    </button>
+  );
 };

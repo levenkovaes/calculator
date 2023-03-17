@@ -31,6 +31,7 @@ export const MathExpression = ({ visibleNumber }: IMathExpressionProps) => {
       // onChange={(e) => {
       //   setInputValue(e.target.value);
       // }}
+      readOnly
       value={visibleNumber}
       type="text"
       className="math-expression"

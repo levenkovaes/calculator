@@ -1,18 +1,23 @@
-import React from "react";
+import React, { MouseEventHandler } from "react";
 
 interface IButtonProps {
   content: string;
-  className: string;
+  customClass: string;
+  handleMathExpressionChange: (content: string) => void;
   // handleClick: (content: string) => void;
 }
 
-export const Button = ({ content, className }: IButtonProps) => {
+export const Button = ({
+  content,
+  customClass,
+  handleMathExpressionChange,
+}: IButtonProps) => {
   return (
     <button
-      className={className}
-      // onClick={() => {
-      //   handleClick(content);
-      // }}
+      className={customClass}
+      onClick={() => {
+        handleMathExpressionChange(content);
+      }}
     >
       {content}
     </button>

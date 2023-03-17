@@ -5,11 +5,21 @@
   border: 2px solid $main-color;
   background-color: $main-color-dark;
   // box-shadow: inset 0 0 4px 2px $main-color;
+  transition: all linear 0.3s;
 
-  &--sign {
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &--operator {
     background-color: $additional-color;
     // box-shadow: none;
     border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $additional-color-dark;
+    }
   }
 
   &--clear {
@@ -17,6 +27,11 @@
     color: $additional-color-dark;
     // box-shadow: none;
     border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+    }
   }
 
   &--wide {

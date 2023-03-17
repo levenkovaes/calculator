@@ -1,0 +1,23 @@
+@import "./common/variables";
+@import "./common/normalizecss";
+@import "./common/mixins";
+@import "./blocks/calculator-grid";
+@import "./blocks/button";
+@import "./blocks/math-expression";
+
+body {
+  background-color: $main-color;
+  color: $white;
+  font-family: $regular-font;
+  font-size: 20px;
+
+  @include xl {
+    font-size: 24px;
+  }
+  //   background-color: $main-color;
+  // height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // justify-content: space-between;
+  // overflow-x: hidden;
+}

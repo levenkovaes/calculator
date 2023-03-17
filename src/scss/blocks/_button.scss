@@ -1,0 +1,55 @@
+.button {
+  border-radius: 50%;
+  color: $white;
+  border: none;
+  border: 2px solid $main-color;
+  background-color: $main-color-dark;
+  // box-shadow: inset 0 0 4px 2px $main-color;
+  transition: all linear 0.3s;
+
+  &:hover {
+    background-color: $main-color;
+  }
+
+  &--operator {
+    background-color: $additional-color;
+    // box-shadow: none;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $additional-color-dark;
+    }
+  }
+
+  &--clear {
+    background-color: $additional-color-light;
+    color: $additional-color-dark;
+    // box-shadow: none;
+    border: none;
+
+    &:hover,
+    &:focus {
+      background-color: $white;
+    }
+  }
+
+  &--wide {
+    border-radius: 50px;
+  }
+
+  &--clear-wide {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  &--equal-wide {
+    grid-column-start: 3;
+    grid-column-end: 5;
+  }
+
+  &--accent {
+    background-color: $white;
+    color: $additional-color-dark;
+  }
+}

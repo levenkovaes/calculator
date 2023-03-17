@@ -1,0 +1,15 @@
+.math-expression {
+  background-color: $main-color-dark;
+  color: $white;
+  font-size: 38px;
+  text-align: right;
+  border: none;
+  outline: none;
+  resize: none;
+  grid-column-start: 1;
+  grid-column-end: 5;
+
+  @include sm {
+    font-size: 60px;
+  }
+}

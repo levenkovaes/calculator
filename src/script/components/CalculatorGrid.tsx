@@ -1,4 +1,4 @@
-import React, { MouseEventHandler, useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "./Button";
 import { MathExpression } from "./MathExpression";
 
@@ -91,8 +91,6 @@ export const CalculatorGrid = () => {
     }
 
     if (/[\d | .]/.test(buttonContent)) {
-      console.log(buttonContent);
-      console.log(operator.length);
       if (operator.length > 0 && operator !== "=") {
         setSecondOperand((prev: string) => {
           if (buttonContent === "." && prev.includes(".")) {
@@ -122,12 +120,6 @@ export const CalculatorGrid = () => {
     }
   };
 
-  console.log("firstOperand", firstOperand);
-  console.log("operator", operator);
-  console.log("secondOperand", secondOperand);
-  console.log("visibleNumber", visibleNumber);
-  console.log("");
-
   useEffect(() => {
     if (secondOperand.length > 0) {
       setVisibleNumber(secondOperand);
@@ -136,14 +128,6 @@ export const CalculatorGrid = () => {
 
     setVisibleNumber(firstOperand);
   }, [firstOperand, secondOperand]);
-
-  // useEffect(() => {
-  //   setVisibleNumber(secondOperand);
-  // }, [secondOperand]);
-
-  // useEffect(() => {
-  //   setVisibleNumber(firstOperand);
-  // }, [firstOperand]);
 
   return (
     <div className="calculator-grid">

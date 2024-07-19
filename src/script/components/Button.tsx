@@ -1,10 +1,9 @@
-import React, { MouseEventHandler } from "react";
+import React from "react";
 
 interface IButtonProps {
   content: string;
   customClass: string;
   handleMathExpressionChange: (content: string) => void;
-  // handleClick: (content: string) => void;
 }
 
 export const Button = ({
